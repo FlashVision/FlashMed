@@ -1,8 +1,6 @@
 """Tests for FlashMed task implementations."""
 
 import torch
-import numpy as np
-import pytest
 
 
 class TestClassificationTask:

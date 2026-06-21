@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import Optional, Tuple
 
 import torch
-import torch.nn as nn
 
 
 class Exporter:

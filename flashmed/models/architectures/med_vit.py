@@ -1,11 +1,8 @@
 """Medical Vision Transformer (MedViT) for classification, detection, and pathology."""
 
-import math
-from typing import Optional
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from flashmed.registry import MODELS
 

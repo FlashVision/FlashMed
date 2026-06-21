@@ -1,6 +1,6 @@
 """Evidential Deep Learning for classification with uncertainty quantification."""
 
-from typing import Dict, Optional
+from typing import Dict
 
 import numpy as np
 import torch

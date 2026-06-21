@@ -1,7 +1,6 @@
 """I/O utilities for saving/loading models and data."""
 
 import json
-import os
 from pathlib import Path
 from typing import Any, Dict, Optional
 

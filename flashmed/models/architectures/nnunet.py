@@ -1,7 +1,7 @@
 """nnU-Net - Self-configuring segmentation network for medical imaging."""
 
 import math
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Tuple
 
 import torch
 import torch.nn as nn

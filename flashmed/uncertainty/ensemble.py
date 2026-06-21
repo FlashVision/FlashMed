@@ -1,6 +1,5 @@
 """Deep Ensemble uncertainty estimation for FlashMed models."""
 
-import copy
 import os
 from typing import Callable, Dict, List, Optional
 

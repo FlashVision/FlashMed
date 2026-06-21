@@ -1,15 +1,12 @@
 """Training engine for FlashMed medical AI models."""
 
-import os
-import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Optional
 
 import numpy as np
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
-from tqdm import tqdm
 
 from flashmed.cfg.config import FlashMedConfig, get_config
 

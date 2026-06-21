@@ -1,7 +1,6 @@
 """SwinUNETR - Swin Transformer encoder with UNet-style decoder for medical segmentation."""
 
-import math
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 
 import torch
 import torch.nn as nn
@@ -63,7 +62,7 @@ class WindowAttention(nn.Module):
         self.window_size = window_size
         self.spatial_dims = spatial_dims
 
-        seq_len = window_size ** spatial_dims
+        window_size ** spatial_dims
         self.relative_position_bias_table = nn.Parameter(
             torch.zeros((2 * window_size - 1) ** spatial_dims, num_heads)
         )

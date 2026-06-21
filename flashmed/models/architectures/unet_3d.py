@@ -1,6 +1,5 @@
 """3D UNet for volumetric medical image segmentation (CT/MRI)."""
 
-from typing import List, Optional, Tuple
 
 import torch
 import torch.nn as nn

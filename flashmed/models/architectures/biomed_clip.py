@@ -1,7 +1,7 @@
 """BiomedCLIP - Contrastive Language-Image Pre-training for biomedical zero-shot classification."""
 
 import math
-from typing import List, Optional, Tuple
+from typing import Optional
 
 import torch
 import torch.nn as nn

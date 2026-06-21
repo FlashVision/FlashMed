@@ -102,7 +102,7 @@ def cmd_check(args):
         model = FlashMed(task="classification", num_classes=14, pretrained=False)
         model.eval()
         with torch.no_grad():
-            out = model(torch.randn(1, 3, 224, 224))
+            model(torch.randn(1, 3, 224, 224))
         print(f"  {_colored('✓', 'green')} model forward pass (FlashMed classification, 224px)")
     except Exception as e:
         print(f"  {_colored('✗', 'red')} model forward pass: {e}")

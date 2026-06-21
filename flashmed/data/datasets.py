@@ -1,6 +1,5 @@
 """Medical imaging datasets for training and evaluation."""
 
-import os
 from pathlib import Path
 from typing import Callable, Dict, List, Optional, Tuple
 

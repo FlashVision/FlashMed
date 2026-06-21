@@ -1,7 +1,6 @@
 """Tests for FlashMed model architectures."""
 
 import torch
-import pytest
 
 
 class TestMedViT:

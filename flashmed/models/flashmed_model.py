@@ -1,6 +1,5 @@
 """FlashMed unified model factory for all medical AI tasks."""
 
-from typing import Any, Dict, Optional
 
 import torch
 import torch.nn as nn

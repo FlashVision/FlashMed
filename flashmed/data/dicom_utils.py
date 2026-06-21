@@ -1,12 +1,12 @@
 """DICOM file utilities for medical image loading and processing."""
 
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Dict, Optional
 
 import numpy as np
 
 
-def read_dicom(path: str) -> "pydicom.Dataset":
+def read_dicom(path: str) -> "pydicom.Dataset":  # type: ignore[name-defined]  # noqa: F821
     """Read a DICOM file and return the dataset object.
 
     Args:
@@ -142,7 +142,7 @@ def load_dicom_series(directory: str) -> np.ndarray:
     return volume
 
 
-def dicom_to_pil(path: str, **kwargs) -> "PIL.Image.Image":
+def dicom_to_pil(path: str, **kwargs) -> "PIL.Image.Image":  # type: ignore[name-defined]  # noqa: F821
     """Convert a DICOM file to a PIL Image for display/processing."""
     from PIL import Image
     pixel_array = dicom_to_numpy(path, normalize=True, **kwargs)

@@ -1,7 +1,6 @@
 """MedSAM - Segment Anything Model adapted for medical image segmentation."""
 
-import math
-from typing import List, Optional, Tuple
+from typing import Optional, Tuple
 
 import torch
 import torch.nn as nn

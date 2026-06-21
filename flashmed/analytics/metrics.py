@@ -1,6 +1,5 @@
 """Medical imaging evaluation metrics (AUC-ROC, Dice, sensitivity, specificity, F1)."""
 
-from typing import Optional
 
 import numpy as np
 import torch

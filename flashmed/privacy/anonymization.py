@@ -1,10 +1,9 @@
 """DICOM de-identification and anonymization utilities."""
 
 import hashlib
-import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional
 
 from flashmed.registry import PRIVACY_METHODS
 

@@ -1,6 +1,6 @@
 """Organ and lesion segmentation task (2D and 3D)."""
 
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Tuple
 
 import numpy as np
 import torch

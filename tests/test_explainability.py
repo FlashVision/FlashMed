@@ -3,7 +3,6 @@
 import torch
 import torch.nn as nn
 import numpy as np
-import pytest
 
 
 class _TinyClassifier(nn.Module):

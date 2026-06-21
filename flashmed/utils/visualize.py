@@ -1,6 +1,6 @@
 """Medical image visualization and GradCAM attention maps."""
 
-from typing import Optional, Tuple
+from typing import Optional
 
 import numpy as np
 import torch

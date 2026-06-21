@@ -1,11 +1,10 @@
 """Prediction/inference engine for FlashMed models."""
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Union
 
 import numpy as np
 import torch
-import torch.nn as nn
 from PIL import Image
 
 
@@ -119,7 +118,7 @@ class Predictor:
             return {
                 "findings": findings,
                 "num_findings": len(findings),
-                "all_probabilities": {l: float(p) for l, p in zip(labels, probs)},
+                "all_probabilities": {lbl: float(p) for lbl, p in zip(labels, probs)},
             }
         else:
             probs = torch.softmax(output, dim=1).squeeze(0).cpu().numpy()

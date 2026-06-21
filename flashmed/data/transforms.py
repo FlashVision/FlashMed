@@ -1,9 +1,8 @@
 """Medical-specific image transforms and augmentations."""
 
-from typing import Dict, List, Optional, Tuple
+from typing import Tuple
 
 import numpy as np
-import torch
 from torchvision import transforms as T
 
 from flashmed.registry import TRANSFORMS

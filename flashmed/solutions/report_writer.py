@@ -1,7 +1,7 @@
 """Automated radiology report writer using vision-language models."""
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Dict, List, Optional
 
 import torch
 from PIL import Image
@@ -136,7 +136,7 @@ class ReportWriter:
             recommendation = "No immediate follow-up required."
         else:
             findings_text = "\n".join(findings_list)
-            top_findings = [l for p, l in sorted(zip(probs, labels), reverse=True) if p > 0.5][:3]
+            top_findings = [lbl for p, lbl in sorted(zip(probs, labels), reverse=True) if p > 0.5][:3]
             impression = f"Findings suggestive of: {', '.join(top_findings)}."
             recommendation = "Clinical correlation recommended. Consider follow-up imaging as clinically indicated."
 

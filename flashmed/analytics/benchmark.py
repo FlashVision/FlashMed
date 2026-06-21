@@ -44,7 +44,7 @@ class Benchmark:
 
         results = {}
         print(f"\n{'='*70}")
-        print(f"  FlashMed Benchmark Suite")
+        print("  FlashMed Benchmark Suite")
         print(f"  Device: {self.device}")
         print(f"{'='*70}\n")
 
@@ -55,7 +55,7 @@ class Benchmark:
             self._print_result(task, result)
 
         print(f"\n{'='*70}")
-        print(f"  Benchmark Complete")
+        print("  Benchmark Complete")
         print(f"{'='*70}")
 
         return results
