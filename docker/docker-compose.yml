@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  flashmed:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: flashvision/flashmed:latest
+    volumes:
+      - ../data:/app/data
+      - ../workspace:/app/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    command: ["check"]
+
+  train:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: flashvision/flashmed:latest
+    volumes:
+      - ../data:/app/data
+      - ../workspace:/app/workspace
+      - ../configs:/app/configs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    command: ["train", "--config", "configs/flashmed_xray_cls.yaml"]
+
+  benchmark:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: flashvision/flashmed:latest
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: ["benchmark", "--tasks", "classification,segmentation,pathology"]

@@ -1,0 +1,33 @@
+task: report_gen
+model_name: med_vlm
+num_classes: 0
+input_size: 224
+in_channels: 3
+pretrained: false
+
+epochs: 30
+batch_size: 8
+learning_rate: 0.00005
+weight_decay: 0.01
+optimizer: adamw
+scheduler: cosine
+warmup_epochs: 3
+
+data_dir: data/mimic_cxr
+train_split: train
+val_split: val
+num_workers: 4
+
+modality: xray
+multi_label: false
+dicom_input: false
+
+lora: true
+lora_rank: 16
+lora_alpha: 32.0
+lora_dropout: 0.05
+
+save_dir: workspace/report_generation
+device: cuda
+mixed_precision: true
+seed: 42

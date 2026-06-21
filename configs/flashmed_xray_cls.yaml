@@ -1,0 +1,33 @@
+task: classification
+model_name: med_vit
+num_classes: 14
+input_size: 224
+in_channels: 3
+pretrained: true
+
+epochs: 100
+batch_size: 16
+learning_rate: 0.0001
+weight_decay: 0.00001
+optimizer: adamw
+scheduler: cosine
+warmup_epochs: 5
+label_smoothing: 0.1
+
+data_dir: data/chestxray14
+train_split: train
+val_split: val
+num_workers: 4
+
+modality: xray
+multi_label: true
+dicom_input: false
+
+lora: false
+lora_rank: 8
+lora_alpha: 16.0
+
+save_dir: workspace/xray_classification
+device: cuda
+mixed_precision: true
+seed: 42

@@ -1,0 +1,31 @@
+task: pathology
+model_name: med_vit
+num_classes: 9
+input_size: 256
+in_channels: 3
+pretrained: true
+
+epochs: 50
+batch_size: 64
+learning_rate: 0.001
+weight_decay: 0.0001
+optimizer: adamw
+scheduler: cosine
+warmup_epochs: 3
+label_smoothing: 0.05
+
+data_dir: data/pathmnist
+train_split: train
+val_split: val
+num_workers: 4
+
+modality: pathology
+multi_label: false
+dicom_input: false
+
+lora: false
+
+save_dir: workspace/pathology
+device: cuda
+mixed_precision: true
+seed: 42

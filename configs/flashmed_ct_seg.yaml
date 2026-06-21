@@ -1,0 +1,32 @@
+task: segmentation
+model_name: unet_3d
+seg_num_classes: 4
+input_size: 96
+in_channels: 4
+spatial_dims: 3
+pretrained: false
+
+epochs: 200
+batch_size: 2
+learning_rate: 0.0001
+weight_decay: 0.00001
+optimizer: adamw
+scheduler: cosine
+warmup_epochs: 10
+
+data_dir: data/brats
+train_split: train
+val_split: val
+num_workers: 4
+roi_size: [96, 96, 96]
+
+modality: mri
+multi_label: false
+dicom_input: false
+
+lora: false
+
+save_dir: workspace/ct_segmentation
+device: cuda
+mixed_precision: true
+seed: 42
